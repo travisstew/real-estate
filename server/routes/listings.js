@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {getListing, getListings} = require('../controllers/listingsController');
 
-router.get('/',getListings);
+router.get('/api/listings',getListings);
 
 router.get('/listing/:id', getListing );
 
