@@ -24,9 +24,9 @@ function Home() {
 
     <div>
         <h1>HOMES</h1>
-          {/* {listings && listings.map((l)=>(
-            <p>{l.branding}</p>
-          ))} */}
+          {listings && listings.map((listing)=>(
+            <p>{listing.address}</p>
+          ))}
     </div>
   )
 }
