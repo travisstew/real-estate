@@ -1,5 +1,9 @@
 import React from 'react'
 import {useEffect, useState} from 'react';
+import ListingCard from '../components/ListingCard';
+import Listings from '../components/ListingCard';
+
+
 
 
 function Home() {
@@ -13,7 +17,7 @@ function Home() {
     
           if (response.ok){
               setListings(json);
-              console.log(json);
+              
           }
         }
 
@@ -22,13 +26,11 @@ function Home() {
     },[]);
 
   return (
-
-    <div>
-        <h1>HOMES</h1>
-          {listings && listings.map((listing)=>(
-            <p>{listing.address}</p>
+      <>
+               {listings && listings.map((listing)=>(
+                  <ListingCard key={listing.property_id} listing={listing} />
           ))}
-    </div>
+      </>
   )
 }
 
